@@ -10,7 +10,7 @@ import (
 )
 
 func connectDb() string {
-	dsn := "host=localhost user=postgres password=harsh@0321 dbname=test port=5432 sslmode=disable TimeZone=Asia/Kolkata"
+	dsn := "host=localhost user=postgres password=harsh dbname=test port=5432 sslmode=disable TimeZone=Asia/Kolkata"
 	_, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		fmt.Println("Not connected")
